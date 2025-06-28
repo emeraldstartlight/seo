@@ -1,0 +1,9 @@
+import { json } from '@vercel/node';
+let store = [];
+export default function handler(req, res) {
+  if (req.method === 'POST') {
+    store.push(req.body);
+    return res.status(200).json({ message: 'Data ontvangen' });
+  }
+  return res.status(405).json({ error: 'Method not allowed' });
+}
