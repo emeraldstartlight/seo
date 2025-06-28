@@ -50,3 +50,11 @@ Plaats deze samen met onderstaande package.json in de ROOT van je nieuwe GitHub 
   }
 }
 */
+services:
+  - type: web
+    name: ai-seo-backend
+    env: node
+    plan: free
+    root: .
+    buildCommand: npm install
+    startCommand: node server.js
